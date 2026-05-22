@@ -1,0 +1,35 @@
+.header {
+    &__wrapper {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__links {
+        display: flex;
+        column-gap: 20px;
+        a {
+            color: #FEE97D;
+            text-decoration: underline;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+    }
+    &__languages {
+        font-size: 20px;
+        cursor: pointer;
+        color: #FEE97D;
+        text-transform: uppercase;
+    }
+    &__lang {
+        text-decoration: underline;
+        &-active {
+            color: #fff;
+            text-decoration: none
+        }
+        &:hover {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
