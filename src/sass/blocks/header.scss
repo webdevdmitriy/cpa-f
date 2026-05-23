@@ -1,3 +1,5 @@
+@use '../base/variables.scss' as *;
+
 .header {
     &__wrapper {
         display: flex;
@@ -8,25 +10,25 @@
         display: flex;
         column-gap: 20px;
         a {
-            color: #FEE97D;
+            color: $yellow;
             text-decoration: underline;
             font-size: 20px;
             text-transform: uppercase;
             &:hover {
-                color: white;
+                color: $white;
             }
         }
     }
     &__languages {
         font-size: 20px;
         cursor: pointer;
-        color: #FEE97D;
+        color: $yellow;
         text-transform: uppercase;
     }
     &__lang {
         text-decoration: underline;
         &-active {
-            color: #fff;
+            color: $white;
             text-decoration: none
         }
     }

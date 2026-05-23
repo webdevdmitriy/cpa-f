@@ -1,8 +1,10 @@
+import '@/sass/main.scss';
+
 import Header from "@/components/Header/Header";
 
 export default function Home() {
   return (
-    <main>
+    <main className='page_container'>
       <Header/>
     </main>
   );
