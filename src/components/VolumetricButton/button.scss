@@ -3,9 +3,8 @@
     margin: 100px auto 0 auto;
     &__btn {
         position: relative;
-        padding: 0 10px;
+        padding: 24px 10px;
         width: fit-content;
-        height: 70px;
         background-color: #FEE97D;
         border: 2.5px solid #0C090E;
         border-radius: 3px;
@@ -41,6 +40,16 @@
             top: -9px;
             right: -15px;
             transform: skewY(-45deg);
+        }
+        &:hover {
+            background-color: #0C090E;
+            color: #FEE97D;
+            border-color: #FEE97D;
+            &::before,
+            &::after {
+                background-color: #0C090E;
+                border-color: #FEE97D;
+            }
         }
     }
 }
