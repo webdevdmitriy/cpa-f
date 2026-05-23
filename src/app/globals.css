@@ -49,3 +49,7 @@ a {
     color-scheme: dark;
   }
 }
+
+.container {
+  padding: 0 50px;
+}

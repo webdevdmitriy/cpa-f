@@ -1,0 +1,47 @@
+.profit {
+    position: relative;
+    min-height: 100vh;
+    padding: 30px 0 0 0;
+    background-color: #560080;
+    background: linear-gradient(140deg, #DC8400 0%, #560080 56%, #220032 100%);
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__content {
+        width: fit-content;
+        transform: translateY(30%);
+    }
+    &__header {
+        font-size: 80px;
+        font-weight: 700;
+        text-transform: uppercase;
+        span {
+            color: rgba(254, 233, 125, 1)
+        }
+    }
+    &__description {
+        margin-top: 12px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    &__btn {
+        margin-top: 40px; // В макете отступ сверху 30px, но тут я написал 40, т.к. у кнопки верхняя грань высотой 10px
+    }
+    &__img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    &__icons {
+        position: absolute;
+        bottom: 50px;
+        display: flex;
+        column-gap: 30px;
+        width: fit-content;
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

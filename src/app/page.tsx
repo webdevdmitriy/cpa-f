@@ -1,9 +1,10 @@
 import VolumetricButton from "@/components/VolumetricButton/Button";
+import ProfitSection from "@/components/ProfitSection/ProfitSection";
 
 export default function Home() {
   return (
     <main>
-      <VolumetricButton/>
+      <ProfitSection/>
     </main>
   );
 }
