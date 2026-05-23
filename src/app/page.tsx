@@ -1,8 +1,10 @@
-import MultiTasks from "@/components/MultiTasks/MultiTasks";
+import '@/sass/main.scss';
+
+import MultiTasks from '@/components/MultiTasks/MultiTasks';
 
 export default function Home() {
   return (
-    <main>
+    <main className='page_container'>
       <MultiTasks/>
     </main>
   );

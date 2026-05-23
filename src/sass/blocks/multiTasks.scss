@@ -1,11 +1,13 @@
+@use '../base/variables.scss' as *;
+
 .tasks {
     min-height: 100vh;
-    background-color: rgba(20, 9, 26, 1);
+    background-color: $dark;
     padding: 60px 0 0 0;
     &__header {
         font-size: 40px;
         text-align: right;
-        color: rgba(254, 233, 125, 1);
+        color: $yellow;
         text-transform: uppercase;
         line-height: 90%;
         font-weight: 700;
@@ -35,18 +37,18 @@
             font-weight: 700;
             line-height: 24px;
             span {
-                color: rgba(254, 233, 125, 1);
+                color: $yellow;
             }
         }
     }
     &__card {
         width: 370px;
         height: 100%;
-        background-color: rgba(158, 19, 224, 1);
+        background-color: $main;
         border-radius: 8px;
         padding: 10px;
         &-header {
-            color: rgba(254, 233, 125, 1);
+            color: $yellow;
             font-size: 28px;
             line-height: 28px;
             text-transform: uppercase;
@@ -54,7 +56,7 @@
         }
         &-description {
             margin-top: 10px;
-            color: rgba(255, 255, 255, 1);
+            color: $white;
             font-size: 20px;
             line-height: 24px;
         }
