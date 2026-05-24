@@ -1,5 +1,4 @@
-import VolumetricButton from "@/components/VolumetricButton/Button";
-import ProfitSection from "@/components/ProfitSection/ProfitSection";
+import ProfitSection from '@/components/ProfitSection/ProfitSection';
 
 export default function Home() {
   return (

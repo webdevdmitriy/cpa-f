@@ -1,15 +1,13 @@
-import './button.scss';
+import styles from './button.module.scss'
 
 interface VolumetricButtonProps {
-    label: string;
+    label?: string;
 }
 
-const VolumetricButton = ({label = ""}: VolumetricButtonProps) => {
+export default function VolumetricButton({label = ''}: VolumetricButtonProps) {
     return (
-        <div className="volumetric">
-            <button className="volumetric__btn">{label}</button>
+        <div className={styles.volumetric}>
+            <button className={styles.btn}>{label}</button>
         </div>
     )
 }
-
-export default VolumetricButton;

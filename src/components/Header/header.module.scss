@@ -1,0 +1,37 @@
+@use '../../sass/base/variables.scss' as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    column-gap: 20px;
+    a {
+        color: $yellow;
+        text-decoration: underline;
+        font-size: 20px;
+        text-transform: uppercase;
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+.languages {
+    font-size: 20px;
+    cursor: pointer;
+    color: $yellow;
+    text-transform: uppercase;
+}
+
+.lang {
+    text-decoration: underline;
+}
+
+.active {
+    color: $white;
+    text-decoration: none
+}
