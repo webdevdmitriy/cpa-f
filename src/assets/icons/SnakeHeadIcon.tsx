@@ -1,4 +1,6 @@
-export const SnakeHeadIcon = () => {
+import { SVGProps } from "react";
+
+export const SnakeHeadIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="80"
@@ -6,6 +8,7 @@ export const SnakeHeadIcon = () => {
       viewBox="0 0 80 74"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <ellipse
         cx="62.8988"
