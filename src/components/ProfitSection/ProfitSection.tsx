@@ -1,15 +1,15 @@
-import styles from './profitSection.module.scss';
+import styles from './profitSection.module.scss'
 
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from 'next/image'
+import Link from 'next/link'
 
-import VolumetricButton from '../VolumetricButton/Button';
-import Header from '../Header/Header';
+import VolumetricButton from '../VolumetricButton/Button'
+import Header from '../Header/Header'
 
-import snake_1 from '@/assets/images/snake_1.png';
-import { InstagramIcon } from '@/assets/icons/InstagramIcon';
-import { TelegramIcon } from '@/assets/icons/TelegramIcon';
-import { LinkedInIcon } from '@/assets/icons/LinkedInIcon';
+import snake_1 from '@/assets/images/snake_1.png'
+import { InstagramIcon } from '@/assets/icons/InstagramIcon'
+import { TelegramIcon } from '@/assets/icons/TelegramIcon'
+import { LinkedInIcon } from '@/assets/icons/LinkedInIcon'
 
 export default function ProfitSection() {
   return (
@@ -44,5 +44,5 @@ export default function ProfitSection() {
         </div>
       </div>
     </div>
-  );
+  )
 }

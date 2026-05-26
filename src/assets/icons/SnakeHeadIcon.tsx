@@ -1,4 +1,4 @@
-import { SVGProps } from 'react';
+import { SVGProps } from 'react'
 
 export const SnakeHeadIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
@@ -48,5 +48,5 @@ export const SnakeHeadIcon = (props: SVGProps<SVGSVGElement>) => {
         fill="#FFFFFF"
       />
     </svg>
-  );
-};
+  )
+}
