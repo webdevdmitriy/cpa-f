@@ -1,41 +1,41 @@
 .header {
-    font-family: $font-family-primary;
-    font-weight: $font-weight-bold;
-    font-size: $font-size-lg;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-lg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .icon {
-    width: 45px;
-    height: 41px;
+  width: 45px;
+  height: 41px;
 }
 
 .links {
-    display: flex;
-    column-gap: 20px;
-    a {
-        color: $color-yellow;
-        text-decoration: underline;
-        text-transform: uppercase;
-        &:hover {
-            color: $color-white;
-        }
+  display: flex;
+  column-gap: 20px;
+  a {
+    color: $color-yellow;
+    text-decoration: underline;
+    text-transform: uppercase;
+    &:hover {
+      color: $color-white;
     }
+  }
 }
 
 .languages {
-    cursor: pointer;
-    color: $color-yellow;
-    text-transform: uppercase;
+  cursor: pointer;
+  color: $color-yellow;
+  text-transform: uppercase;
 }
 
 .lang {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .active {
-    color: $color-white;
-    text-decoration: none
+  color: $color-white;
+  text-decoration: none;
 }

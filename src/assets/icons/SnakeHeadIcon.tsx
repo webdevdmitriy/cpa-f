@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react';
 
 export const SnakeHeadIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
@@ -10,13 +10,7 @@ export const SnakeHeadIcon = (props: SVGProps<SVGSVGElement>) => {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <ellipse
-        cx="62.8988"
-        cy="19.267"
-        rx="1.92081"
-        ry="5.12251"
-        fill="#FFFFFF"
-      />
+      <ellipse cx="62.8988" cy="19.267" rx="1.92081" ry="5.12251" fill="#FFFFFF" />
       <ellipse
         cx="1.92081"
         cy="5.12251"
