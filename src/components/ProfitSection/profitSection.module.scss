@@ -1,55 +1,61 @@
-@use '../../sass/base/variables.scss' as *;
+.container {
+  padding: 0 50px;
+}
 
 .profit {
-    position: relative;
-    min-height: 100vh;
-    padding: 30px 0 0 0;
-    background: linear-gradient(140deg, #DC8400 0%, #560080 56%, #220032 100%);
+  position: relative;
+  min-height: 100vh;
+  padding: 30px 0 0 0;
+  background: linear-gradient(140deg, #dc8400 0%, #560080 56%, #220032 100%);
 }
 
 .wrapper {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .content {
-    width: fit-content;
-    transform: translateY(30%);
+  width: fit-content;
+  transform: translateY(30%);
 }
 
 .header {
-    font-size: 80px;
-    font-weight: 700;
-    text-transform: uppercase;
-    span {
-        color: $yellow;
-    }
+  font-size: 80px;
+  line-height: $line-height-tight;
+  font-weight: $font-weight-bold;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  span {
+    color: $color-yellow;
+  }
 }
 
 .description {
-    margin-top: 12px;
-    font-size: 20px;
-    line-height: 24px;
+  margin-top: 12px;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-lg;
+  font-family: $font-family-secondary;
+  line-height: $line-height-base;
 }
 
 .btn {
-    margin-top: 40px; // В макете отступ сверху 30px, но тут я написал 40, т.к. у кнопки верхняя грань высотой 10px
+  margin-top: 40px; // В макете отступ сверху 30px, но тут я написал 40, т.к. у кнопки верхняя грань высотой 10px
 }
 
 .img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .icons {
-    position: absolute;
-    bottom: 50px;
-    display: flex;
-    column-gap: 30px;
-    width: fit-content;
-    img {
-        width: 40px;
-        height: 40px;
-    }
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  column-gap: 30px;
+  width: fit-content;
+  img {
+    width: 40px;
+    height: 40px;
+  }
 }

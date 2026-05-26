@@ -1,37 +1,41 @@
-@use '../../sass/base/variables.scss' as *;
-
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-lg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  width: 45px;
+  height: 41px;
 }
 
 .links {
-    display: flex;
-    column-gap: 20px;
-    a {
-        color: $yellow;
-        text-decoration: underline;
-        font-size: 20px;
-        text-transform: uppercase;
-        &:hover {
-            color: $white;
-        }
+  display: flex;
+  column-gap: 20px;
+  a {
+    color: $color-yellow;
+    text-decoration: underline;
+    text-transform: uppercase;
+    &:hover {
+      color: $color-white;
     }
+  }
 }
 
 .languages {
-    font-size: 20px;
-    cursor: pointer;
-    color: $yellow;
-    text-transform: uppercase;
+  cursor: pointer;
+  color: $color-yellow;
+  text-transform: uppercase;
 }
 
 .lang {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .active {
-    color: $white;
-    text-decoration: none
+  color: $color-white;
+  text-decoration: none;
 }
