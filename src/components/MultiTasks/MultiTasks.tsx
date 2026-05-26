@@ -1,9 +1,9 @@
-import styles from './multiTasks.module.scss';
+import styles from './multiTasks.module.scss'
 
-import Image from 'next/image';
-import snake_5 from '@/assets/images/snake_5.png';
+import Image from 'next/image'
+import snake_5 from '@/assets/images/snake_5.png'
 
-import MultiTasksCard from './MultiTasksCard/MultiTasksCard';
+import MultiTasksCard from './MultiTasksCard/MultiTasksCard'
 
 const cardsInfo = {
   middle: [
@@ -35,7 +35,7 @@ const cardsInfo = {
       description: 'From setup to scaling — we support you every step of the way'
     }
   ]
-};
+}
 
 export default function MultiTasks() {
   return (
@@ -64,5 +64,5 @@ export default function MultiTasks() {
         </div>
       </div>
     </div>
-  );
+  )
 }

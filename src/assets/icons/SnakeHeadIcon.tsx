@@ -39,5 +39,5 @@ export const SnakeHeadIcon = () => {
         fill="#FFFFFF"
       />
     </svg>
-  );
-};
+  )
+}

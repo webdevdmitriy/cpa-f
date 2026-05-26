@@ -6,5 +6,5 @@ export const ArrowIcon = () => {
         fill="#0C090E"
       />
     </svg>
-  );
-};
+  )
+}
