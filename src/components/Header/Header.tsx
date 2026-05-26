@@ -13,8 +13,8 @@ export default function Header() {
         <Link href="#">Benefits</Link>
         <Link href="#">Join Us</Link>
         <div className={styles.languages}>
-          <span className={`${styles.lang} ${styles.active}`}>Eng</span>/
-          <span className={styles.lang}>Рус</span>
+          <span className={`${styles.language} ${styles.active}`}>Eng</span>/
+          <span className={styles.language}>Рус</span>
         </div>
       </div>
     </nav>
