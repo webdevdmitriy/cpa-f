@@ -1,9 +1,9 @@
-import VolumetricButton from '@/components/VolumetricButton/Button'
+import VolumetricButton from '@/components/VolumetricButton/Button';
 
 export default function Home() {
   return (
     <main>
-      <VolumetricButton label='partner up'/>
+      <VolumetricButton label="partner up" />
     </main>
   );
 }
