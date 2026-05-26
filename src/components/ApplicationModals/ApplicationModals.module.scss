@@ -1,0 +1,289 @@
+.showcase {
+  display: grid;
+  width: min(100%, 1148px);
+  grid-template-columns: repeat(2, minmax(0, 558px));
+  align-items: start;
+  gap: 32px;
+  justify-content: center;
+}
+
+.cardShell {
+  display: block;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 387px;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $color-purple;
+  border-radius: $radius-lg;
+  background: $color-white;
+  color: #0c090e;
+  padding: 60px 30px 52px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  display: flex;
+  width: 44px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: $color-purple;
+  cursor: pointer;
+}
+
+.closeButton svg {
+  width: 18px;
+  height: 16px;
+}
+
+.snakeIcon {
+  width: 56.85px;
+  height: 52px;
+  flex: 0 0 auto;
+  color: $color-purple;
+}
+
+.body,
+.doneBody {
+  display: flex;
+  width: min(100%, 498px);
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body {
+  padding-top: 40px;
+}
+
+.doneBody {
+  width: min(100%, 512px);
+  justify-content: flex-start;
+  padding-top: 40px;
+}
+
+.formContent {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.note {
+  width: 100%;
+  font-family: $font-family-secondary;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+}
+
+.note span {
+  color: $color-purple;
+}
+
+.fields {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 192px minmax(0, 294px);
+  gap: 7px 12px;
+}
+
+.field,
+.selectField,
+.contactField {
+  display: flex;
+  min-width: 0;
+}
+
+.field {
+  grid-column: 1 / -1;
+}
+
+.field input,
+.contactField input,
+.selectField select {
+  width: 100%;
+  min-width: 0;
+  height: 36px;
+  border: 1px solid rgba($color-purple, 0.3);
+  border-radius: $radius-md;
+  background: $color-white;
+  color: #0c090e;
+  font-family: $font-family-secondary;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  outline: none;
+  padding: 7px 12px;
+}
+
+.field input::placeholder,
+.contactField input::placeholder {
+  color: #0c090e;
+  opacity: 0.78;
+}
+
+.selectField {
+  position: relative;
+}
+
+.contactField {
+  position: relative;
+}
+
+.fieldText {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  color: #0c090e;
+  font-family: $font-family-secondary;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.fieldText span {
+  color: $color-purple;
+}
+
+.selectField::after {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 0;
+  height: 0;
+  border-top: 6px solid $color-purple;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: '';
+  pointer-events: none;
+  transform: translateY(-35%);
+}
+
+.selectField select {
+  appearance: none;
+  padding-right: 24px;
+  color: #0c090e;
+}
+
+.selectField option {
+  background: $color-white;
+  color: #0c090e;
+}
+
+.selectField select:valid + .fieldText {
+  opacity: 0;
+}
+
+.contactField input {
+  color: #0c090e;
+}
+
+.contactField input:focus + .fieldText,
+.contactField input:not(:placeholder-shown) + .fieldText {
+  opacity: 0;
+}
+
+.primaryButton {
+  display: inline-flex;
+  min-width: 121px;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: $radius-md;
+  background: $color-yellow;
+  color: #0c090e;
+  cursor: pointer;
+  font-family: $font-family-primary;
+  font-size: 14px;
+  font-weight: $font-weight-medium;
+  line-height: 16px;
+  padding: 9px 40px 10px;
+}
+
+.submitButton {
+  min-width: 138px;
+}
+
+.successContent {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.successText {
+  display: grid;
+  width: 100%;
+  gap: 20px;
+  text-align: center;
+}
+
+.successText h1 {
+  font-family: $font-family-primary;
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+.successText p {
+  max-width: 340px;
+  justify-self: center;
+  font-family: $font-family-primary;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.srOnly {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 1180px) {
+  .showcase {
+    grid-template-columns: 1fr;
+    max-width: 558px;
+  }
+}
+
+@media (max-width: 620px) {
+  .card {
+    height: auto;
+    min-height: 387px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .fields {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .field {
+    grid-column: auto;
+  }
+}
