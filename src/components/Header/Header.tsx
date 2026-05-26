@@ -1,8 +1,8 @@
-import styles from './header.module.scss';
+import styles from './header.module.scss'
 
-import { SnakeHeadIcon } from '@/assets/icons/SnakeHeadIcon';
+import { SnakeHeadIcon } from '@/assets/icons/SnakeHeadIcon'
 
-import Link from 'next/link';
+import Link from 'next/link'
 
 export default function Header() {
   return (
@@ -18,5 +18,5 @@ export default function Header() {
         </div>
       </div>
     </nav>
-  );
+  )
 }

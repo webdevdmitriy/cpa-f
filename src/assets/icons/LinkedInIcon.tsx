@@ -6,5 +6,5 @@ export const LinkedInIcon = () => {
         fill="white"
       />
     </svg>
-  );
-};
+  )
+}

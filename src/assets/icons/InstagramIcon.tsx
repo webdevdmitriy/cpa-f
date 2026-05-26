@@ -6,5 +6,5 @@ export const InstagramIcon = () => {
         fill="white"
       />
     </svg>
-  );
-};
+  )
+}
