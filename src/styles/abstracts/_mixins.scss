@@ -1,0 +1,32 @@
+@use 'sass:map';
+@use './tokens' as *;
+
+@mixin media-up($breakpoint) {
+  @media (min-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-down($breakpoint) {
+  @media (max-width: (map.get($breakpoints, $breakpoint) - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: calc(100% - ($container-padding-mobile * 2));
+  max-width: $container-max-width;
+  margin-inline: auto;
+
+  @include media-up(lg) {
+    width: calc(100% - ($container-padding-desktop * 2));
+  }
+}
+
+@mixin heading($size: $font-size-2xl) {
+  font-size: $size;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
