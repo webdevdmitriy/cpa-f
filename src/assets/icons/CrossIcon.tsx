@@ -6,5 +6,5 @@ export const CrossIcon = () => {
         fill="#9E13E0"
       />
     </svg>
-  );
-};
+  )
+}
