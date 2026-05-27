@@ -1,9 +1,10 @@
-import styles from './multiTasks.module.scss'
+import styles from './MultiTasks.module.scss'
 
 import Image from 'next/image'
 import snake_5 from '@/assets/images/snake_5.png'
 
 import MultiTasksCard from './MultiTasksCard/MultiTasksCard'
+import { PageTitle } from '../PageTitle/PageTitle'
 
 const cardsInfo = {
   middle: [
@@ -41,7 +42,8 @@ export default function MultiTasks() {
   return (
     <div className={styles.tasks}>
       <div className={styles.container}>
-        <h2 className={styles.header}>multi-tasks</h2>
+        {/* <h2 className={styles.header}>multi-tasks</h2> */}
+        <PageTitle className={styles.header} text="multi-tasks" />
         <div className={styles.cards}>
           <div className={`${styles.info} ${styles.cardsWrapper}`}>
             <p>

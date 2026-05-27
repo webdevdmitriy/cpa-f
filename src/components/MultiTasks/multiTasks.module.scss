@@ -5,7 +5,7 @@
 .tasks {
   min-height: 100vh;
   background-color: $color-dark;
-  padding: 60px 0 125px 0;
+  padding: rem(60) 0 rem(125) 0;
 }
 
 .header {
@@ -17,28 +17,28 @@
 }
 
 .cards {
-  margin-top: 70px;
+  margin-top: rem(70);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  column-gap: 24px;
+  column-gap: rem(24);
 }
 
 .cardsWrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 25px;
+  row-gap: rem(25);
 }
 
 .info {
-  width: 560px;
+  width: rem(560);
   background: linear-gradient(240deg, #9500dc 17.61%, #560080 57.18%, #220032 88.56%);
-  border-radius: 8px;
+  border-radius: rem(8);
   img {
     margin: 0 auto;
   }
   p {
-    margin: 30px auto 0 auto;
+    margin: rem(30) auto 0 auto;
     font-size: $font-size-lg;
     font-weight: $font-weight-bold;
     font-family: $font-family-primary;

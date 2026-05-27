@@ -1,4 +1,4 @@
-import styles from './multiTasksCard.module.scss'
+import styles from './MultiTasksCard.module.scss'
 
 interface MultiTasksCardProps {
   label: string
