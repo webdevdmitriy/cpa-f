@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
     loadPaths: ['src'],
     additionalData: `
       @use "styles/abstracts/tokens" as *;
+      @use "styles/abstracts/_mixins.scss" as *;
     `
   }
 }

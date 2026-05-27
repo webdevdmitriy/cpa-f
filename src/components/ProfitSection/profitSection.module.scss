@@ -1,5 +1,5 @@
 .container {
-  padding: 0 50px;
+  @include container;
 }
 
 .profit {
@@ -52,6 +52,7 @@
   position: absolute;
   bottom: 50px;
   display: flex;
+  align-items: center;
   column-gap: 30px;
   width: fit-content;
   img {
