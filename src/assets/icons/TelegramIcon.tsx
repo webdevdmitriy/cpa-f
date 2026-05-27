@@ -1,12 +1,6 @@
 export const TelegramIcon = () => {
   return (
-    <svg
-      width="34"
-      height="29"
-      viewBox="0 0 34 29"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="34" height="29" viewBox="0 0 34 29" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"
@@ -14,5 +8,5 @@ export const TelegramIcon = () => {
         fill="white"
       />
     </svg>
-  );
-};
+  )
+}

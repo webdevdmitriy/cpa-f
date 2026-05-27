@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import styles from './page.module.scss';
-import { PageTitle } from '@/components/PageTitle/PageTitle';
+import { PageTitle } from '@/components/PageTitle/PageTitle'
+import VolumetricButton from '@/components/VolumetricButton/Button'
 
 export default function Home() {
   return (
     <main>
       <PageTitle text="Hi. Im title" />
+      <VolumetricButton label="partner up" />
     </main>
-  );
+  )
 }
