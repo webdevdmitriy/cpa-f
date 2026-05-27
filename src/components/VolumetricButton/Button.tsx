@@ -7,7 +7,9 @@ interface VolumetricButtonProps {
 export default function VolumetricButton({ label = '' }: VolumetricButtonProps) {
   return (
     <div className={styles.volumetric}>
-      <button className={styles.btn}>{label}</button>
+      <button type="button" className={styles.btn}>
+        {label}
+      </button>
     </div>
   )
 }
