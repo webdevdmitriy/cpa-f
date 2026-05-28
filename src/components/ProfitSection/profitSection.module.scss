@@ -6,15 +6,17 @@
   position: relative;
   min-height: 100vh;
   padding: rem(30) 0 0 0;
-  background: linear-gradient(140deg, #dc8400 0%, #560080 56%, #220032 100%);
+  background: $color-gradient;
 }
 
 .wrapper {
+  position: relative;
   display: flex;
   align-items: center;
 }
 
 .content {
+  position: relative;
   width: fit-content;
   transform: translateY(30%);
 }
@@ -43,8 +45,8 @@
 
 .img {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  bottom: -450px;
+  right: -200px;
 }
 
 .icons {
