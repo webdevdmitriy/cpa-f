@@ -4,7 +4,7 @@
 
 .btn {
   position: relative;
-  padding: 24px 10px;
+  padding: rem(24) rem(10);
   width: fit-content;
   background-color: $color-yellow;
   border: 2.5px solid $color-black;
@@ -12,7 +12,7 @@
   color: $color-black;
   text-transform: uppercase;
   letter-spacing: 20%;
-  font-size: 23px;
+  font-size: rem(23);
   font-weight: $font-weight-bold;
   cursor: pointer;
   z-index: 1;

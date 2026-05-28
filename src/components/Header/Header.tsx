@@ -1,4 +1,4 @@
-import styles from './header.module.scss'
+import styles from './Header.module.scss'
 
 import Link from 'next/link'
 
@@ -7,7 +7,7 @@ import { SnakeHeadIcon } from '@/assets/icons/SnakeHeadIcon'
 export default function Header() {
   return (
     <nav className={styles.header}>
-      <SnakeHeadIcon className={styles.icon} />
+      <SnakeHeadIcon />
       <div className={styles.links}>
         <Link href="#">Team</Link>
         <Link href="#">Benefits</Link>

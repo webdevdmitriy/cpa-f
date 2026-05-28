@@ -7,14 +7,9 @@
   align-items: center;
 }
 
-.icon {
-  width: 45px;
-  height: 41px;
-}
-
 .links {
   display: flex;
-  column-gap: 20px;
+  column-gap: rem(20);
   a {
     color: $color-yellow;
     text-decoration: underline;

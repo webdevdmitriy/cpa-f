@@ -6,8 +6,7 @@ const nextConfig: NextConfig = {
   sassOptions: {
     loadPaths: ['src'],
     additionalData: `
-      @use "styles/abstracts/tokens" as *;
-      @use "styles/abstracts/_mixins.scss" as *;
+      @use "styles/abstracts" as *;
     `
   }
 }

@@ -5,7 +5,7 @@
 .profit {
   position: relative;
   min-height: 100vh;
-  padding: 30px 0 0 0;
+  padding: rem(30) 0 0 0;
   background: linear-gradient(140deg, #dc8400 0%, #560080 56%, #220032 100%);
 }
 
@@ -19,10 +19,9 @@
   transform: translateY(30%);
 }
 
-.header {
-  font-size: 80px;
+.head {
+  font-size: rem(80);
   line-height: $line-height-tight;
-  font-weight: $font-weight-bold;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
   span {
@@ -31,7 +30,7 @@
 }
 
 .description {
-  margin-top: 12px;
+  margin-top: $space-3;
   font-weight: $font-weight-regular;
   font-size: $font-size-lg;
   font-family: $font-family-secondary;
@@ -39,7 +38,7 @@
 }
 
 .btn {
-  margin-top: 40px; // В макете отступ сверху 30px, но тут я написал 40, т.к. у кнопки верхняя грань высотой 10px
+  margin-top: $space-10;
 }
 
 .img {
@@ -50,13 +49,13 @@
 
 .icons {
   position: absolute;
-  bottom: 50px;
+  bottom: rem(50);
   display: flex;
   align-items: center;
-  column-gap: 30px;
+  column-gap: rem(30);
   width: fit-content;
   img {
-    width: 40px;
-    height: 40px;
+    width: rem(40);
+    height: rem(40);
   }
 }

@@ -1,4 +1,4 @@
-import styles from './profitSection.module.scss'
+import styles from './ProfitSection.module.scss'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -18,8 +18,8 @@ export default function ProfitSection() {
         <Header />
         <div className={styles.wrapper}>
           <div className={styles.content}>
-            <h1 className={styles.header}>
-              practice <br /> makes <span>profits</span>
+            <h1 className={styles.head}>
+              practice <br /> makes <span>profit</span>
             </h1>
             <p className={styles.description}>
               We provide effective solutions, tested and refined <br /> on our own products and ad

@@ -1,14 +1,26 @@
 @use 'sass:map';
 @use './tokens' as *;
 
-@mixin media-up($breakpoint) {
-  @media (min-width: map.get($breakpoints, $breakpoint)) {
+@mixin media-up-width($breakpoint) {
+  @media (min-width: map.get($breakpoints-width, $breakpoint)) {
     @content;
   }
 }
 
-@mixin media-down($breakpoint) {
-  @media (max-width: (map.get($breakpoints, $breakpoint) - 0.02px)) {
+@mixin media-down-width($breakpoint) {
+  @media (max-width: (map.get($breakpoints-width, $breakpoint) - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin media-up-height($breakpoint) {
+  @media (min-height: map.get($breakpoints-height, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-down-height($breakpoint) {
+  @media (max-height: (map.get($breakpoints-height, $breakpoint) - 0.02px)) {
     @content;
   }
 }
@@ -18,7 +30,7 @@
   max-width: $container-max-width;
   margin-inline: auto;
 
-  @include media-up(lg) {
+  @include media-up-width(lg) {
     width: calc(100% - ($container-padding-desktop * 2));
   }
 }
