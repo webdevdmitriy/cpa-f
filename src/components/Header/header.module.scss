@@ -7,17 +7,13 @@
   align-items: center;
 }
 
-.icon {
-  width: 45px;
-  height: 41px;
-}
-
 .links {
   display: flex;
-  column-gap: 20px;
+  column-gap: rem(20);
   a {
     color: $color-yellow;
     text-decoration: underline;
+    text-underline-offset: 3px;
     text-transform: uppercase;
     &:hover {
       color: $color-white;
@@ -29,6 +25,10 @@
   cursor: pointer;
   color: $color-yellow;
   text-transform: uppercase;
+}
+
+.slash {
+  margin: 0 2px;
 }
 
 .language {
