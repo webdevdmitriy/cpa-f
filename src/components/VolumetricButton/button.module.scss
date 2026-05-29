@@ -8,7 +8,7 @@
   padding: rem(24) rem(10);
   width: fit-content;
   background-color: $color-yellow;
-  border: rem(2.5) solid $color-black;
+  border: 2.5px solid $color-black;
   border-radius: rem(3);
   color: $color-black;
   text-transform: uppercase;
@@ -22,8 +22,8 @@
     z-index: -1;
     box-sizing: content-box;
     background-color: $color-yellow;
-    border: rem(2.5) solid $color-black;
-    border-radius: rem(2);
+    border: 2.5px solid $color-black;
+    border-radius: 2px;
     width: 100%;
     height: rem(10);
     position: absolute;
@@ -36,8 +36,8 @@
     z-index: -1;
     box-sizing: content-box;
     background-color: $color-yellow;
-    border: rem(2.5) solid $color-black;
-    border-radius: rem(3);
+    border: 2.5px solid $color-black;
+    border-radius: 3px;
     width: rem(10);
     height: 100%;
     position: absolute;

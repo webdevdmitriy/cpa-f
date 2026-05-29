@@ -42,7 +42,6 @@ export default function MultiTasks() {
   return (
     <div className={styles.tasks}>
       <div className={styles.container}>
-        {/* <h2 className={styles.header}>multi-tasks</h2> */}
         <PageTitle className={styles.header} text="multi-tasks" />
         <div className={styles.cards}>
           <div className={`${styles.info} ${styles.cardsWrapper}`}>
