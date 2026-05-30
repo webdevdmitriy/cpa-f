@@ -17,12 +17,11 @@
 }
 
 .cards {
-  // position: absolute;
   margin-top: rem(70);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  column-gap: rem(24);
+  column-gap: rem(20);
 }
 
 .cardsWrapper {
@@ -37,6 +36,11 @@
   border-radius: rem(8);
   img {
     margin: 0 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
   }
   p {
     margin: rem(30) auto 0 auto;

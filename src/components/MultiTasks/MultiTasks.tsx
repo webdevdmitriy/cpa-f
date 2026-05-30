@@ -50,7 +50,7 @@ export default function MultiTasks() {
               developers,
               <br /> and copywriters — no middlemen, <br /> no outsourcing
             </p>
-            <Image src={snake_5} alt="snake"></Image>
+            <Image draggable="false" src={snake_5} alt="snake"></Image>
           </div>
           <div className={styles.cardsWrapper}>
             {cardsInfo.middle.map(item => (
