@@ -46,7 +46,12 @@
 .img {
   position: absolute;
   bottom: -450px;
-  right: -200px;
+  right: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 .icons {
