@@ -1,12 +1,13 @@
-import { ApplicationModals } from '@/components/ApplicationModals';
-import { MultiBenefits } from '@/components/MultiBenefits';
-import styles from './page.module.scss';
+import { Footer } from '@/components/Footer/Footer'
+import { PageTitle } from '@/components/PageTitle/PageTitle'
+import VolumetricButton from '@/components/VolumetricButton/Button'
 
 export default function Home() {
   return (
-    <main className={styles.page}>
-      <MultiBenefits />
-      <ApplicationModals />
+    <main>
+      <PageTitle text="Hi. Im title" />
+      <VolumetricButton label="partner up" />
+      <Footer />
     </main>
-  );
+  )
 }
