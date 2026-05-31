@@ -1,0 +1,68 @@
+.container {
+  @include container;
+}
+
+.profit {
+  position: relative;
+  min-height: 100vh;
+  padding: rem(30) 0 0 0;
+  background: $color-gradient;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  width: fit-content;
+  transform: translateY(30%);
+}
+
+.head {
+  font-size: rem(80);
+  line-height: $line-height-tight;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  span {
+    color: $color-yellow;
+  }
+}
+
+.description {
+  margin-top: $space-3;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-lg;
+  font-family: $font-family-secondary;
+  line-height: $line-height-base;
+}
+
+.btn {
+  margin-top: $space-10;
+}
+
+.img {
+  position: absolute;
+  bottom: -450px;
+  right: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.icons {
+  position: absolute;
+  bottom: rem(50);
+  display: flex;
+  align-items: center;
+  column-gap: rem(30);
+  width: fit-content;
+  img {
+    width: rem(40);
+    height: rem(40);
+  }
+}

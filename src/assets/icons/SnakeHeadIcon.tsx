@@ -1,6 +1,8 @@
-export const SnakeHeadIcon = () => {
+import { ComponentProps } from 'react'
+
+export const SnakeHeadIcon = (props: ComponentProps<'svg'>) => {
   return (
-    <svg width="80" height="74" viewBox="0 0 80 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="45" height="41" viewBox="0 0 80 74" fill="none" xmlns="http://www.w3.org/2000/svg">
       <ellipse cx="62.8988" cy="19.267" rx="1.92081" ry="5.12251" fill="#FFFFFF" />
       <ellipse
         cx="1.92081"
