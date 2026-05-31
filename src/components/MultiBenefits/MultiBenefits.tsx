@@ -1,17 +1,17 @@
-import Image from 'next/image';
-import { SnakeHeadIcon } from '@/assets/icons/SnakeHeadIcon';
-import snakeImage from '@/assets/images/snake_4.png';
-import { SectionLabel } from '@/components/SectionLabel';
-import { BenefitCard } from './BenefitCard';
-import styles from './multiBenefits.module.scss';
+import Image from 'next/image'
+import { SnakeHeadIcon } from '@/assets/icons/SnakeHeadIcon'
+import snakeImage from '@/assets/images/snake_4.png'
+import { SectionLabel } from '@/components/SectionLabel'
+import { BenefitCard } from './BenefitCard'
+import styles from './MultiBenefits.module.scss'
 
 const benefits = [
   'We take on outsourced projects across any niche — from iGaming and dating to e-commerce and recruitment',
   'We deliver what has already proven effective — many times over',
   'We don’t learn at the client’s expense'
-] as const;
+] as const
 
-const marqueeRepeats = 8;
+const marqueeRepeats = 8
 
 export function MultiBenefits() {
   return (
@@ -57,5 +57,5 @@ export function MultiBenefits() {
         </div>
       </div>
     </section>
-  );
+  )
 }

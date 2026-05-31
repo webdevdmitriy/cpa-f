@@ -1,8 +1,9 @@
-import type { ComponentPropsWithoutRef } from 'react';
-import styles from './benefitCard.module.scss';
+import type { ComponentPropsWithoutRef } from 'react'
+import cn from 'classnames'
+import styles from './BenefitCard.module.scss'
 
-type BenefitCardProps = ComponentPropsWithoutRef<'li'>;
+type BenefitCardProps = ComponentPropsWithoutRef<'li'>
 
 export function BenefitCard({ className, ...props }: BenefitCardProps) {
-  return <li className={className ? `${styles.card} ${className}` : styles.card} {...props} />;
+  return <li className={cn(styles.card, className)} {...props} />
 }
