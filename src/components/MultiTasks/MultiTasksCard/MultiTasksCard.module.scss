@@ -1,0 +1,26 @@
+.card {
+  width: rem(370);
+  height: 100%;
+  background-color: $color-purple;
+  border-radius: rem(8);
+  padding: rem(10);
+}
+
+.cardHeader {
+  color: $color-yellow;
+  font-size: $font-size-xl;
+  font-family: $font-family-primary;
+  line-height: $line-height-heading;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  white-space: pre-line;
+}
+
+.cardDescription {
+  margin-top: rem(10);
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-regular;
+  color: $color-white;
+  font-size: $font-size-lg;
+  line-height: $line-height-base;
+}

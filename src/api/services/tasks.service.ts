@@ -5,6 +5,6 @@ import type { Locale } from '../types'
 
 export const tasksService = {
   getTasks(lang: Locale) {
-    return request<Tasks>(endpoints.tasks(lang))
+    return request<Tasks>(endpoints.tasks(lang), 'GET')
   }
 }

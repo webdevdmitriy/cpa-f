@@ -1,10 +1,20 @@
 import type { HttpMethod } from './types'
 
-export async function request<T>(url: string, method?: HttpMethod, body?: BodyInit): Promise<T> {
+const MAIN_URL = process.env.MAIN_URL
+
+export async function request<T>(
+  url: string,
+  method: HttpMethod = 'GET',
+  body?: BodyInit
+): Promise<T> {
   try {
-    const response = await fetch(url, {
+    console.log(process.env.MAIN_URL)
+    // console.log(process.env.API_KEY);
+    console.log(`${MAIN_URL}/${url}`)
+
+    const response = await fetch(`${MAIN_URL}/${url}`, {
       method,
-      headers: { 'x-api-key': process.env.NEXT_PUBLIC_API_KEY ?? '' },
+      headers: { 'x-api-key': process.env.API_KEY ?? '' },
       body
     })
 
