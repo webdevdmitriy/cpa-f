@@ -1,1 +1,0 @@
-export { BenefitCard } from './BenefitCard';
