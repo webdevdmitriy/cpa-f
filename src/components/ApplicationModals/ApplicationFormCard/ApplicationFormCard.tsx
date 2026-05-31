@@ -1,5 +1,6 @@
-import { ApplicationCard } from '../ApplicationCard';
-import styles from '../ApplicationModals.module.scss';
+import cn from 'classnames'
+import { ApplicationCard } from '../ApplicationCard'
+import styles from '../ApplicationModals.module.scss'
 
 export const ApplicationFormCard = () => (
   <ApplicationCard>
@@ -38,9 +39,9 @@ export const ApplicationFormCard = () => (
         </label>
       </div>
 
-      <button className={`${styles.primaryButton} ${styles.submitButton}`} type="button">
+      <button className={cn(styles.primaryButton, styles.submitButton)} type="button">
         Submit
       </button>
     </form>
   </ApplicationCard>
-);
+)

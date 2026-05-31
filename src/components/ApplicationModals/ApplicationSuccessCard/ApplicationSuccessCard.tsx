@@ -1,5 +1,5 @@
-import { ApplicationCard } from '../ApplicationCard';
-import styles from '../ApplicationModals.module.scss';
+import { ApplicationCard } from '../ApplicationCard'
+import styles from '../ApplicationModals.module.scss'
 
 export const ApplicationSuccessCard = () => (
   <ApplicationCard variant="done">
@@ -14,4 +14,4 @@ export const ApplicationSuccessCard = () => (
       </button>
     </div>
   </ApplicationCard>
-);
+)

@@ -1,1 +1,1 @@
-export { ApplicationFormCard } from './ApplicationFormCard';
+export { ApplicationFormCard } from './ApplicationFormCard'

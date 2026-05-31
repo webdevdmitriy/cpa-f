@@ -1,6 +1,6 @@
-import { ApplicationFormCard } from './ApplicationFormCard';
-import { ApplicationSuccessCard } from './ApplicationSuccessCard';
-import styles from './ApplicationModals.module.scss';
+import { ApplicationFormCard } from './ApplicationFormCard'
+import { ApplicationSuccessCard } from './ApplicationSuccessCard'
+import styles from './ApplicationModals.module.scss'
 
 export const ApplicationModals = () => {
   return (
@@ -8,5 +8,5 @@ export const ApplicationModals = () => {
       <ApplicationFormCard />
       <ApplicationSuccessCard />
     </section>
-  );
-};
+  )
+}
