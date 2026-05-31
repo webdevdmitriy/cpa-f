@@ -1,0 +1,42 @@
+.header {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-lg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  column-gap: rem(20);
+  a {
+    color: $color-yellow;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-transform: uppercase;
+    &:hover {
+      color: $color-white;
+    }
+  }
+}
+
+.languages {
+  cursor: pointer;
+  color: $color-yellow;
+  text-transform: uppercase;
+}
+
+.slash {
+  margin: 0 2px;
+}
+
+.language {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.active {
+  color: $color-white;
+  text-decoration: none;
+}
