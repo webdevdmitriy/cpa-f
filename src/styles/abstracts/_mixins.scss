@@ -30,7 +30,7 @@
   max-width: $container-max-width;
   margin-inline: auto;
 
-  @include media-up(lg) {
+  @include media-up-width(lg) {
     width: calc(100% - ($container-padding-desktop * 2));
   }
 }

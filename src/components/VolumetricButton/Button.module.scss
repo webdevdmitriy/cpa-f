@@ -13,7 +13,7 @@
   text-transform: uppercase;
   letter-spacing: 20%;
   font-size: rem(23);
-  font-weight: 700;
+  font-weight: $font-weight-bold;
   cursor: pointer;
   z-index: 1;
   &::before {
