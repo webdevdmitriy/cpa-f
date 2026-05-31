@@ -1,0 +1,38 @@
+.footer {
+  display: flex;
+  align-items: center;
+  gap: rem(30);
+  padding: rem(30) 0;
+
+  @include media-up-height(xl) {
+    padding: rem(20) 0;
+    justify-content: end;
+  }
+}
+
+.scroll_top_wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding-left: rem(78);
+
+  @include media-up-height(xl) {
+    margin-left: unset;
+  }
+}
+
+.link {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-lg;
+  color: $color-yellow;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.arrow_top {
+  rotate: -90deg;
+  width: rem(30);
+  path {
+    fill: $color-yellow;
+  }
+}

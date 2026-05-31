@@ -1,4 +1,6 @@
-export const TelegramIcon = () => {
+import { ComponentProps } from 'react'
+
+export const TelegramIcon = (props: ComponentProps<'svg'>) => {
   return (
     <svg width="34" height="29" viewBox="0 0 34 29" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
