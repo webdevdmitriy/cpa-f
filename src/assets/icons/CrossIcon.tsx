@@ -1,4 +1,6 @@
-export const CrossIcon = () => {
+import { ComponentProps } from 'react'
+
+export const CrossIcon = (props: ComponentProps<'svg'>) => {
   return (
     <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path

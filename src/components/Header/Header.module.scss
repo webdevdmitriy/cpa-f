@@ -27,15 +27,14 @@
   text-transform: uppercase;
 }
 
-.lang {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
 .slash {
   margin: 0 2px;
 }
 
+.language {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .active {
   color: $color-white;
   text-decoration: none;

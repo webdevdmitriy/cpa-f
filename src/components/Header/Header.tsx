@@ -1,9 +1,9 @@
 import styles from './Header.module.scss'
 
-import Link from 'next/link'
+import { SnakeHeadIcon } from '@/assets/icons/SnakeHeadIcon'
 import cn from 'classnames'
 
-import { SnakeHeadIcon } from '@/assets/icons/SnakeHeadIcon'
+import Link from 'next/link'
 
 export default function Header() {
   return (
@@ -14,9 +14,9 @@ export default function Header() {
         <Link href="#">Benefits</Link>
         <Link href="#">Join Us</Link>
         <div className={styles.languages}>
-          <span className={cn(styles.lang, styles.active)}>Eng</span>
+          <span className={cn(styles.language, styles.active)}>Eng</span>
           <span className={styles.slash}>/</span>
-          <span className={styles.lang}>Рус</span>
+          <span className={styles.language}>Рус</span>
         </div>
       </div>
     </header>
