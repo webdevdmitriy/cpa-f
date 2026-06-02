@@ -6,6 +6,8 @@ import snake_5 from '@/assets/images/snake_5.png'
 import MultiTasksCard from './MultiTasksCard/MultiTasksCard'
 import { PageTitle } from '../PageTitle/PageTitle'
 
+import cn from 'classnames'
+
 const cardsInfo = {
   middle: [
     {
@@ -44,7 +46,8 @@ export default function MultiTasks() {
       <div className={styles.container}>
         <PageTitle className={styles.header} text="multi-tasks" />
         <div className={styles.cards}>
-          <div className={`${styles.info} ${styles.cardsWrapper}`}>
+          {/* <div className={`${styles.info} ${styles.cardsWrapper}`}> */}
+          <div className={cn(styles.info, styles.cardsWrapper)}>
             <p>
               We run an <span>in-house team</span> of media <br /> buyers, designers, creatives,
               developers,
