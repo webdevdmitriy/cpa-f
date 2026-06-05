@@ -1,10 +1,11 @@
 import { request } from '../client'
-import { Multiply } from '../types'
+import { Multiply, Locale } from '../types'
 import { endpoints } from '../endpoints'
-import type { Locale } from '../types'
+import { multiplySchema } from '../schemas/multiply.schema'
 
 export const multiplyService = {
-  getMultiply(lang: Locale) {
-    return request<Multiply>(endpoints.multiply(lang))
+  async getMultiply(lang: Locale = 'en'): Promise<Multiply> {
+    const data = await request<unknown>(endpoints.multiply(lang))
+    return multiplySchema.parse(data)
   }
 }

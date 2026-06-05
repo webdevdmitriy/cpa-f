@@ -1,10 +1,11 @@
 import { request } from '../client'
-import { Tasks } from '../types'
+import { Tasks, Locale } from '../types'
 import { endpoints } from '../endpoints'
-import type { Locale } from '../types'
+import { tasksSchema } from '../schemas/tasks.schema'
 
 export const tasksService = {
-  getTasks(lang: Locale) {
-    return request<Tasks>(endpoints.tasks(lang), 'GET')
+  async getTasks(lang: Locale = 'en'): Promise<Tasks> {
+    const data = await request<unknown>(endpoints.tasks(lang))
+    return tasksSchema.parse(data)
   }
 }

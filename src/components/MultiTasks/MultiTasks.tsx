@@ -10,7 +10,7 @@ import { PageTitle } from '../PageTitle/PageTitle'
 import type { TasksTile } from '@/api/types'
 
 export default async function MultiTasks() {
-  const data = await tasksService.getTasks('en')
+  const data = await tasksService.getTasks()
 
   const middle: TasksTile[] = data.tiles.slice(0, 2)
   const little: TasksTile[] = data.tiles.slice(2)
@@ -29,13 +29,13 @@ export default async function MultiTasks() {
             <Image draggable="false" src={snake_5} alt="snake"></Image>
           </div>
           <div className={styles.cardsWrapper}>
-            {middle.map(item => (
-              <MultiTasksCard key={item.id} title={item.title} text={item.text} />
+            {middle.map((item, index) => (
+              <MultiTasksCard key={index} title={item.title} text={item.text} />
             ))}
           </div>
           <div className={styles.cardsWrapper}>
-            {little.map(item => (
-              <MultiTasksCard key={item.id} title={item.title} text={item.text} />
+            {little.map((item, index) => (
+              <MultiTasksCard key={index} title={item.title} text={item.text} />
             ))}
           </div>
         </div>

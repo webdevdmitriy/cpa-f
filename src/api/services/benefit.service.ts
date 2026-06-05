@@ -1,10 +1,11 @@
 import { request } from '../client'
-import { Benefit } from '../types'
+import { Benefit, Locale } from '../types'
 import { endpoints } from '../endpoints'
-import type { Locale } from '../types'
+import { benefitSchema } from '../schemas/benefit.schema'
 
 export const benefitService = {
-  getBenefit(lang: Locale) {
-    return request<Benefit[]>(endpoints.benefits(lang))
+  async getBenefit(lang: Locale = 'en'): Promise<Benefit> {
+    const data = await request<unknown>(endpoints.benefits(lang))
+    return benefitSchema.parse(data)
   }
 }

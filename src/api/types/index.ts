@@ -14,8 +14,12 @@ export interface FormRequest {
   contact: string
 }
 
+export interface FormResponse {
+  success: boolean
+  message: string
+}
+
 export interface TasksTile {
-  id: number
   title: string
   text: string
 }
