@@ -7,34 +7,11 @@ import { tasksService } from '@/api/services/tasks.service'
 
 import MultiTasksCard from './MultiTasksCard/MultiTasksCard'
 import { PageTitle } from '../PageTitle/PageTitle'
-import type { TasksTile, Tasks } from '@/api/types'
-
-async function request(): Promise<Tasks> {
-  console.log('Запрос данных...')
-
-  try {
-    const response = await fetch('https://cpa-server-vtel.onrender.com/en/tasks', {
-      method: 'GET',
-      headers: {
-        'x-api-key': 'prodcpakey333'
-      }
-    })
-
-    if (!response.ok) {
-      throw new Error('Ошибка...')
-    }
-
-    const data: Tasks = await response.json()
-    return data
-  } catch (err) {
-    console.error(err)
-    console.log('Произошла ошибка запроса...')
-    throw err
-  }
-}
+import type { TasksTile } from '@/api/types'
 
 export default async function MultiTasks() {
-  const data = await request()
+  const data = await tasksService.getTasks('en')
+
   const middle: TasksTile[] = data.tiles.slice(0, 2)
   const little: TasksTile[] = data.tiles.slice(2)
 
