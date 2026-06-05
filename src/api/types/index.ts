@@ -14,9 +14,15 @@ export interface FormRequest {
   contact: string
 }
 
+export interface TasksTile {
+  id: number
+  title: string
+  text: string
+}
+
 export interface Tasks {
   description: string
-  tiles: Record<string, unknown>[]
+  tiles: TasksTile[]
 }
 
 export interface MultiplyStep {

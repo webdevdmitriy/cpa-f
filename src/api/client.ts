@@ -12,10 +12,10 @@ export async function request<T>(
     // console.log(process.env.API_KEY);
     console.log(`${MAIN_URL}/${url}`)
 
-    const response = await fetch(`${MAIN_URL}/${url}`, {
+    const response = await fetch(`https://cpa-server-vtel.onrender.com/${url}`, {
       method,
-      headers: { 'x-api-key': process.env.API_KEY ?? '' },
-      body
+      headers: { 'x-api-key': process.env.API_KEY ?? '', 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
     })
 
     if (!response.ok) {

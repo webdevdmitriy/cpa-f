@@ -7,44 +7,36 @@ import { tasksService } from '@/api/services/tasks.service'
 
 import MultiTasksCard from './MultiTasksCard/MultiTasksCard'
 import { PageTitle } from '../PageTitle/PageTitle'
+import type { TasksTile, Tasks } from '@/api/types'
 
-const cardsInfo = {
-  middle: [
-    {
-      id: 1,
-      label: 'Flexible infrastructure',
-      description: 'Custom tools, fast integrations and scalable architecture'
-    },
-    {
-      id: 2,
-      label: 'High-performing creatives',
-      description: 'Scroll-stopping ads tailored to your vertical'
+async function request(): Promise<Tasks> {
+  console.log('Запрос данных...')
+
+  try {
+    const response = await fetch('https://cpa-server-vtel.onrender.com/en/tasks', {
+      method: 'GET',
+      headers: {
+        'x-api-key': 'prodcpakey333'
+      }
+    })
+
+    if (!response.ok) {
+      throw new Error('Ошибка...')
     }
-  ],
-  little: [
-    {
-      id: 3,
-      label: 'Compelling copywriting',
-      description: 'Messaging that hooks, sells, and drives funnel growth'
-    },
-    {
-      id: 4,
-      label: 'Adaptive\n media buying',
-      description: 'No wasted budgets — we test, tweak, and scale'
-    },
-    {
-      id: 5,
-      label: 'Full-cycle support',
-      description: 'From setup to scaling — we support you every step of the way'
-    }
-  ]
+
+    const data: Tasks = await response.json()
+    return data
+  } catch (err) {
+    console.error(err)
+    console.log('Произошла ошибка запроса...')
+    throw err
+  }
 }
 
 export default async function MultiTasks() {
-  const data = await tasksService.getTasks('en')
-
-  const middle = data.tiles.slice(0, 2)
-  const little = data.tiles.slice(2)
+  const data = await request()
+  const middle: TasksTile[] = data.tiles.slice(0, 2)
+  const little: TasksTile[] = data.tiles.slice(2)
 
   return (
     <div className={styles.tasks}>
@@ -60,13 +52,13 @@ export default async function MultiTasks() {
             <Image draggable="false" src={snake_5} alt="snake"></Image>
           </div>
           <div className={styles.cardsWrapper}>
-            {cardsInfo.middle.map(item => (
-              <MultiTasksCard key={item.id} label={item.label} description={item.description} />
+            {middle.map(item => (
+              <MultiTasksCard key={item.id} title={item.title} text={item.text} />
             ))}
           </div>
           <div className={styles.cardsWrapper}>
-            {cardsInfo.little.map(item => (
-              <MultiTasksCard key={item.id} label={item.label} description={item.description} />
+            {little.map(item => (
+              <MultiTasksCard key={item.id} title={item.title} text={item.text} />
             ))}
           </div>
         </div>
