@@ -1,0 +1,54 @@
+{
+  "Home": {
+    "title": "Привет. Я заголовок",
+    "partnerButton": "стать партнером"
+  },
+  "Header": {
+    "team": "Команда",
+    "benefits": "Преимущества",
+    "joinUs": "К нам"
+  },
+  "ProfitSection": {
+    "titleLine1": "practice",
+    "titleLine2": "makes",
+    "titleAccent": "profit",
+    "descriptionLine1": "Предлагаем эффективные решения, которые",
+    "descriptionLine2": "уже протестили на своих продуктах и бюджетах",
+    "button": "Получить профит",
+    "imageAlt": "змея"
+  },
+  "MultiBenefits": {
+    "label": "Multi-benefits",
+    "titleStart": "Хочешь",
+    "titleAccent": "гарантировать",
+    "titleEnd": "результат — контролируй всё сам",
+    "description": "Поэтому мы собрали фултайм-команду, выстроили собственную инфраструктуру под каждую задачу, и каждый день обкатываем её в нише sweepstakes",
+    "benefits": {
+      "first": "Драйвим аутсорс-проекты за аутсорс-проекты в любых нишах — от iGaming и дейтинга до e-commerce и рекрутинга",
+      "second": "Предлагаем проверенные решения, в эффективности которых нет сомнений",
+      "third": "И не учимся за счёт клиента"
+    },
+    "marquee": "Dream big earn bigger!"
+  },
+  "Footer": {
+    "scrollTop": "НАВЕРХ"
+  },
+  "ApplicationModal": {
+    "statesLabel": "Состояния формы заявки",
+    "closeLabel": "Закрыть модальное окно заявки",
+    "form": {
+      "noteBefore": "Поля со звездочкой",
+      "noteAfter": "обязательны",
+      "name": "Ваше имя",
+      "contactMethod": "Способ связи",
+      "contact": "Ваш контакт",
+      "phone": "Телефон",
+      "submit": "Отправить"
+    },
+    "success": {
+      "title": "Мы получили вашу заявку!",
+      "description": "Мы обработаем запрос и свяжемся с вами",
+      "done": "Готово"
+    }
+  }
+}

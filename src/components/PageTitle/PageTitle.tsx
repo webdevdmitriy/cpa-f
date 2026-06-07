@@ -1,13 +1,13 @@
 import { ComponentProps } from 'react'
-import styles from './PageTitle.module.scss'
 import cn from 'classnames'
+import styles from './PageTitle.module.scss'
 
 type TPageTitleProps = { text: string; isUpperCase?: boolean } & ComponentProps<'div'>
 
-export const PageTitle = ({ text, isUpperCase = true, ...props }: TPageTitleProps) => {
+export const PageTitle = ({ text, isUpperCase = true, className, ...props }: TPageTitleProps) => {
   const titleText = isUpperCase ? text.toUpperCase() : text
   return (
-    <div className={cn(styles.title, props.className)} {...props}>
+    <div className={cn(styles.title, className)} {...props}>
       <span>{titleText}</span>
     </div>
   )
