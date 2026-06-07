@@ -1,0 +1,155 @@
+.section {
+  position: relative;
+  min-height: rem(700);
+  overflow: hidden;
+  background: linear-gradient(
+    111.06deg,
+    #dc8400 -3.49%,
+    $color-purple-dark 49.69%,
+    $color-purple-deep 91.86%
+  );
+}
+
+.section::before,
+.section::after {
+  position: absolute;
+  z-index: 0;
+  width: rem(1055);
+  height: rem(1054);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba($color-dark, 0.2) 0%, rgba($color-dark, 0) 70%);
+  content: '';
+  pointer-events: none;
+}
+
+.section::before {
+  top: rem(-356.5);
+  left: calc(50% - rem(207.34));
+}
+
+.section::after {
+  top: rem(101.25);
+  left: calc(50% - rem(1095.19));
+}
+
+.grid {
+  position: absolute;
+  top: 0;
+  right: rem(-20);
+  z-index: 0;
+  width: rem(1277);
+  height: rem(700);
+  background: url('/images/multi-benefits-grid.svg') center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+
+.container {
+  @include container;
+
+  position: relative;
+  z-index: 1;
+  min-height: rem(700);
+}
+
+.textContent {
+  max-width: rem(521);
+  padding-top: rem(87);
+}
+
+.title {
+  max-width: rem(510);
+  color: $color-white;
+  font-size: rem(40);
+  font-weight: $font-weight-bold;
+  line-height: rem(40);
+}
+
+.title span {
+  color: $color-yellow;
+}
+
+.description {
+  max-width: rem(510);
+  margin-top: rem(20);
+  color: $color-white;
+  font-size: rem(16);
+  font-weight: $font-weight-medium;
+  line-height: rem(24);
+}
+
+.snake {
+  position: absolute;
+  top: rem(220);
+  left: rem(376);
+  z-index: 1;
+  width: rem(332);
+  height: auto;
+  pointer-events: none;
+}
+
+.list {
+  position: absolute;
+  top: rem(220);
+  right: 0;
+  z-index: 2;
+  display: flex;
+  width: rem(511);
+  flex-direction: column;
+  gap: rem(20);
+  list-style: none;
+}
+
+.marquee {
+  position: absolute;
+  top: rem(578);
+  left: 50%;
+  z-index: 2;
+  width: calc(100vw + rem(120));
+  height: rem(78);
+  overflow: hidden;
+  border-block: rem(2.25) solid $color-yellow;
+  color: $color-yellow;
+  transform: translateX(-50%) rotate(1deg);
+}
+
+.marqueeTrack {
+  display: flex;
+  height: rem(61);
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+.marqueeItem {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(37.5);
+  padding-inline: 0 rem(37.5);
+  font-size: rem(52.5);
+  font-weight: 300;
+  line-height: rem(61);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.marqueeIcon {
+  width: rem(45);
+  height: auto;
+  flex: 0 0 auto;
+  color: $color-yellow;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marqueeTrack {
+    animation: none;
+  }
+}

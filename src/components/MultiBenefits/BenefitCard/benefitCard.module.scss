@@ -1,0 +1,13 @@
+.card {
+  display: flex;
+  min-height: rem(64);
+  align-items: center;
+  border-radius: $radius-md;
+  background: $color-purple;
+  color: $color-white;
+  font-size: rem(20);
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  padding: rem(20);
+  padding-right: rem(25);
+}
