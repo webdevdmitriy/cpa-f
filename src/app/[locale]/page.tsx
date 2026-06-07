@@ -15,8 +15,6 @@ export default async function Home({ params }: HomeProps) {
   const { locale } = await params
   setRequestLocale(locale)
 
-  const t = await getTranslations('Home')
-
   return (
     <main>
       <ProfitSection />

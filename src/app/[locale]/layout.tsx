@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import cn from 'classnames'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { hasLocale } from 'next-intl'
 import { NextIntlClientProvider } from 'next-intl'
@@ -42,7 +43,7 @@ export default async function LocaleLayout({
   setRequestLocale(locale)
 
   return (
-    <html lang={locale} className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang={locale} className={cn(geistSans.variable, geistMono.variable)}>
       <body>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
