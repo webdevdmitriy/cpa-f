@@ -5,13 +5,22 @@ export async function request<T>(
   method: HttpMethod = 'GET',
   body?: BodyInit
 ): Promise<T> {
-  console.log('Запрос данных...')
-
   try {
-    const response = await fetch(`${process.env.MAIN_URL}/${url}`, {
+    const _apiBase = process.env.API_BASE
+    const _apiKey = process.env.API_KEY
+
+    if (!_apiBase) {
+      throw new Error('API_BASE is not defined in environment variables')
+    }
+
+    if (!_apiKey) {
+      throw new Error('API_KEY is not defined in environment variables')
+    }
+
+    const response = await fetch(`${_apiBase}/${url}`, {
       method,
       headers: {
-        'x-api-key': process.env.API_KEY ?? ''
+        'x-api-key': _apiKey ?? ''
       },
       body: JSON.stringify(body)
     })
@@ -23,6 +32,7 @@ export async function request<T>(
     const data = await response.json()
     return data
   } catch (err) {
+    console.error(err)
     throw err
   }
 }

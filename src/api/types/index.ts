@@ -15,8 +15,8 @@ export interface FormRequest {
 }
 
 export interface FormResponse {
-  success: boolean
   message: string
+  data: FormRequest
 }
 
 export interface TasksTile {

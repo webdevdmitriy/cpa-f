@@ -8,10 +8,8 @@ export const formRequestSchema: z.ZodType<FormRequest> = z.object({
   method: z.string(),
   contact: z.string().email()
 })
-export type FormRequestType = z.infer<typeof formRequestSchema>
 
 export const formResponseSchema: z.ZodType<FormResponse> = z.object({
-  success: z.boolean(),
-  message: z.string()
+  message: z.string(),
+  data: formRequestSchema
 })
-export type FormResponseType = z.infer<typeof formResponseSchema>
