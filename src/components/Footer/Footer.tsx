@@ -1,10 +1,13 @@
 import { ComponentProps } from 'react'
 import styles from './Footer.module.scss'
 import { ArrowIcon } from '@/assets/icons/ArrowIcon'
+import { useTranslations } from 'next-intl'
 
 export const Footer = (props: ComponentProps<'footer'>) => {
+  const t = useTranslations('Footer')
+
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} {...props}>
       <a className={styles.link} href="#">
         INSTAGRAM
       </a>
@@ -16,7 +19,7 @@ export const Footer = (props: ComponentProps<'footer'>) => {
       </a>
       <div className={styles.scroll_top_wrapper}>
         <a className={styles.link} href="#">
-          SCROLL TO TOP
+          {t('scrollTop')}
         </a>
         <ArrowIcon className={styles.arrow_top} />
       </div>

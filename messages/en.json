@@ -1,0 +1,54 @@
+{
+  "Home": {
+    "title": "Hi. Im title",
+    "partnerButton": "partner up"
+  },
+  "Header": {
+    "team": "Team",
+    "benefits": "Benefits",
+    "joinUs": "Join Us"
+  },
+  "ProfitSection": {
+    "titleLine1": "practice",
+    "titleLine2": "makes",
+    "titleAccent": "profit",
+    "descriptionLine1": "We provide effective solutions, tested and refined",
+    "descriptionLine2": "on our own products and ad budgets",
+    "button": "Get in Touch",
+    "imageAlt": "snake"
+  },
+  "MultiBenefits": {
+    "label": "Multi-benefits",
+    "titleStart": "Results can only be",
+    "titleAccent": "guaranteed",
+    "titleEnd": "when you control every step",
+    "description": "That's why we built a full-time in-house team and custom infrastructure — tailored for every task, tested daily in the sweepstakes vertical",
+    "benefits": {
+      "first": "We take on outsourced projects across any niche — from iGaming and dating to e-commerce and recruitment",
+      "second": "We deliver what has already proven effective — many times over",
+      "third": "We don't learn at the client's expense"
+    },
+    "marquee": "Dream big earn bigger!"
+  },
+  "Footer": {
+    "scrollTop": "SCROLL TO TOP"
+  },
+  "ApplicationModal": {
+    "statesLabel": "Application form states",
+    "closeLabel": "Close application modal",
+    "form": {
+      "noteBefore": "Fields with an asterisk",
+      "noteAfter": "are mandatory",
+      "name": "Your Name",
+      "contactMethod": "Contact Method",
+      "contact": "Your Contact",
+      "phone": "Phone",
+      "submit": "Submit"
+    },
+    "success": {
+      "title": "We have received your application!",
+      "description": "We will process your request and get in touch with you",
+      "done": "Done"
+    }
+  }
+}
