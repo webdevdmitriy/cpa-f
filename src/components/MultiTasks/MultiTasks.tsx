@@ -8,9 +8,12 @@ import { tasksService } from '@/api/services/tasks.service'
 import MultiTasksCard from './MultiTasksCard/MultiTasksCard'
 import { PageTitle } from '../PageTitle/PageTitle'
 import type { TasksTile } from '@/api/types'
+import { getLocale } from 'next-intl/server'
+import type { Locale } from '@/i18n/routing'
 
 export default async function MultiTasks() {
-  const data = await tasksService.getTasks()
+  const locale = (await getLocale()) as Locale
+  const data = await tasksService.getTasks(locale)
 
   const middle: TasksTile[] = data.tiles.slice(0, 2)
   const little: TasksTile[] = data.tiles.slice(2)

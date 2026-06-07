@@ -1,4 +1,3 @@
-export type Locale = 'en' | 'ru' | 'ua'
 export type MultiplyTitle = 'for_media_buyers' | 'for_businesses' | 'for_partners'
 export type HttpMethod = 'GET' | 'POST'
 

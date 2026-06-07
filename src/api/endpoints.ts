@@ -1,8 +1,8 @@
-import { Locale } from './types'
+import type { Locale } from '@/i18n/routing'
 
 export const endpoints = {
-  benefits: (lang: Locale = 'en') => `${lang}/benefits`,
-  multiply: (lang: Locale = 'en') => `${lang}/multiply`,
-  tasks: (lang: Locale = 'en') => `${lang}/tasks`,
+  benefits: (lang: Locale) => `${lang}/benefits`,
+  multiply: (lang: Locale) => `${lang}/multiply`,
+  tasks: (lang: Locale) => `${lang}/tasks`,
   form: '/form'
 }
