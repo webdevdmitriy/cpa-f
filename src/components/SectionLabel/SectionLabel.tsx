@@ -1,6 +1,6 @@
 import type { ComponentPropsWithoutRef } from 'react'
 import cn from 'classnames'
-import styles from './SectionLabel.module.scss'
+import styles from './sectionLabel.module.scss'
 
 type SectionLabelProps = ComponentPropsWithoutRef<'p'>
 

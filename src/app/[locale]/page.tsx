@@ -1,0 +1,28 @@
+import { setRequestLocale } from 'next-intl/server'
+import { getTranslations } from 'next-intl/server'
+import { Footer } from '@/components/Footer/Footer'
+
+import { ApplicationModals } from '@/components/ApplicationModals/ApplicationModals'
+import { MultiBenefits } from '@/components/MultiBenefits/MultiBenefits'
+
+import ProfitSection from '@/components/ProfitSection/ProfitSection'
+
+type HomeProps = {
+  params: Promise<{ locale: string }>
+}
+
+export default async function Home({ params }: HomeProps) {
+  const { locale } = await params
+  setRequestLocale(locale)
+
+  const t = await getTranslations('Home')
+
+  return (
+    <main>
+      <ProfitSection />
+      <MultiBenefits />
+      <ApplicationModals />
+      <Footer />
+    </main>
+  )
+}
