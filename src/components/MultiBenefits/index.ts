@@ -1,1 +1,1 @@
-export { MultiBenefits } from './MultiBenefits';
+export { MultiBenefits } from './MultiBenefits'

@@ -1,0 +1,55 @@
+.container {
+  @include container;
+}
+
+.tasks {
+  min-height: 100vh;
+  background-color: $color-dark;
+  padding: rem(60) 0 rem(125) 0;
+}
+
+.header {
+  font-size: $font-size-2xl;
+  text-align: right;
+  color: $color-yellow;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+}
+
+.cards {
+  margin-top: rem(70);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: rem(20);
+}
+
+.cardsWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(25);
+}
+
+.info {
+  width: rem(560);
+  background: linear-gradient(240deg, #9500dc 17.61%, #560080 57.18%, #220032 88.56%);
+  border-radius: rem(8);
+  img {
+    margin: 0 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+  }
+  p {
+    margin: rem(30) auto 0 auto;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    font-family: $font-family-primary;
+    line-height: $line-height-base;
+    span {
+      color: $color-yellow;
+    }
+  }
+}

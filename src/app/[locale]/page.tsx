@@ -6,6 +6,7 @@ import { ApplicationModals } from '@/components/ApplicationModals/ApplicationMod
 import { MultiBenefits } from '@/components/MultiBenefits/MultiBenefits'
 
 import ProfitSection from '@/components/ProfitSection/ProfitSection'
+import MultiTasks from '@/components/MultiTasks/MultiTasks'
 
 type HomeProps = {
   params: Promise<{ locale: string }>
@@ -18,6 +19,7 @@ export default async function Home({ params }: HomeProps) {
   return (
     <main>
       <ProfitSection />
+      <MultiTasks />
       <MultiBenefits />
       <ApplicationModals />
       <Footer />
