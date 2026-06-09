@@ -7,7 +7,9 @@ export const multiplyStepsSchema = z.object({
   step_2: z.string()
 })
 
-export const multiplySchema: z.ZodType<Multiply> = z.object({
-  title: z.enum(['for_media_buyers', 'for_businesses', 'for_partners']),
-  steps: multiplyStepsSchema
-})
+export const multiplySchema: z.ZodType<Multiply[]> = z.array(
+  z.object({
+    title: z.string(),
+    steps: multiplyStepsSchema
+  })
+)

@@ -1,4 +1,3 @@
-export type MultiplyTitle = 'for_media_buyers' | 'for_businesses' | 'for_partners'
 export type HttpMethod = 'GET' | 'POST'
 
 export interface Benefit {
@@ -34,6 +33,6 @@ export interface MultiplyStep {
 }
 
 export interface Multiply {
-  title: MultiplyTitle
+  title: string
   steps: MultiplyStep
 }

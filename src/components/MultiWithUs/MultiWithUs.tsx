@@ -1,85 +1,55 @@
 import styles from './MultiWithUs.module.scss'
 
 import Image from 'next/image'
+import { getLocale } from 'next-intl/server'
+import cn from 'classnames'
 
 import { PageTitle } from '../PageTitle/PageTitle'
+import { Footer } from '../Footer/Footer'
 import VolumetricButton from '../VolumetricButton/Button'
 import { ArrowIcon } from '@/assets/icons/ArrowIcon'
 
 import snake_3 from '@/assets/images/snake_3.png'
 
-import cn from 'classnames'
-import { Footer } from '../Footer/Footer'
+import { multiplyService } from '@/api/services/multiply.service'
+import type { Locale } from '@/i18n/routing'
+import type { Multiply } from '@/api/types'
 
-export default function MultiWithUs() {
+export default async function MultiWithUs() {
+  const locale = (await getLocale()) as Locale
+  const data: Multiply[] = await multiplyService.getMultiply(locale)
+
+  const titles = data.map(item => item.title)
+  const steps = data.map(item => item.steps)
+
   return (
     <div className={styles.multiWithUs}>
       <div className={styles.container}>
         <PageTitle className={styles.header} text="multiply with us" />
         <div className={styles.tabs}>
           <div className={styles.tabsBtns}>
-            <div className={cn(styles.tabBtn, styles.btnActive)}>
-              For Media Buyers
-              <ArrowIcon />
-            </div>
-            <div className={styles.tabBtn}>
-              For Businesses
-              <ArrowIcon />
-            </div>
-            <div className={styles.tabBtn}>
-              For Partners
-              <ArrowIcon />
-            </div>
+            {titles.map((title, id) => (
+              <div key={id} className={styles.tabBtn}>
+                {title
+                  .split('_')
+                  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                  .join(' ')}
+                <ArrowIcon />
+              </div>
+            ))}
           </div>
           <div className="tabsContent">
-            <div className={cn(styles.tabContent, styles.tabActive)}>
-              <p>
-                Got experience with sweepstakes and large ad budgets? Looking for a team where you
-                can grow and scale without limits?
-              </p>
-              <ArrowIcon className={styles.arrow} />
-              <p>
-                Multiply your profits with MULTICPA — we provide the budget, all the tools and high
-                profit shares
-              </p>
-              <ArrowIcon className={styles.arrow} />
-              <div className={styles.btn}>
-                <VolumetricButton label="Join the team" />
+            {steps.map((step, id) => (
+              <div key={id} className={cn(styles.tabContent, styles.tabActive)}>
+                <p>{step.step_1}</p>
+                <ArrowIcon className={styles.arrow} />
+                <p>{step.step_2}</p>
+                <ArrowIcon className={styles.arrow} />
+                <div className={styles.btn}>
+                  <VolumetricButton label="partner up" />
+                </div>
               </div>
-            </div>
-
-            <div className={styles.tabContent}>
-              <p>
-                Experienced solo buyer or running a whole team? Need a reliable partner program with
-                fast onboarding in sweepstakes and full support?
-              </p>
-              <ArrowIcon className={styles.arrow} />
-              <p>
-                Work with MULTICPA — you run the traffic, we handle everything else. From
-                infrastructure and tech support to funnels, creatives, and expert guidance
-              </p>
-              <ArrowIcon className={styles.arrow} />
-              <div className={styles.btn}>
-                <VolumetricButton label="partner up" />
-              </div>
-            </div>
-
-            <div className={styles.tabContent}>
-              <p>
-                Need real customers — not theories on how to get them? Have a budget, but no traffic
-                team, creatives, or strategy?
-              </p>
-              <ArrowIcon className={styles.arrow} />
-              <p>
-                Contact MULTICPA — we’ll build everything from the ground up, drive traffic, and
-                deliver leads in any niche
-              </p>
-              <ArrowIcon className={styles.arrow} />
-              <div className={styles.btn}>
-                <VolumetricButton label="Launch Now" />
-              </div>
-            </div>
-
+            ))}
             <Footer />
           </div>
         </div>
