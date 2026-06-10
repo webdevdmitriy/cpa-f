@@ -9,5 +9,14 @@
   font-weight: $font-weight-bold;
   line-height: 1.2;
   padding: rem(20);
-  padding-right: rem(25);
+  padding-right: rem(80);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.card:hover,
+.card:focus-visible {
+  background-color: $color-yellow;
+  color: $color-ink;
 }

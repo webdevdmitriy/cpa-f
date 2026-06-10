@@ -1,5 +1,4 @@
 import { setRequestLocale } from 'next-intl/server'
-import { getTranslations } from 'next-intl/server'
 
 import { ApplicationModals } from '@/components/ApplicationModals/ApplicationModals'
 import { MultiBenefits } from '@/components/MultiBenefits/MultiBenefits'
@@ -18,11 +17,12 @@ export default async function Home({ params }: HomeProps) {
 
   return (
     <main>
-      <ProfitSection />
-      <MultiTasks />
-      <MultiBenefits />
-      <ApplicationModals />
-      <MultiWithUs />
+      <ApplicationModals>
+        <ProfitSection />
+        <MultiTasks />
+        <MultiBenefits />
+        <MultiWithUs />
+      </ApplicationModals>
     </main>
   )
 }

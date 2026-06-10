@@ -40,10 +40,18 @@
       "noteBefore": "Поля со звездочкой",
       "noteAfter": "обязательны",
       "name": "Ваше имя",
+      "namePattern": "Имя должно содержать минимум 2 буквы",
       "contactMethod": "Способ связи",
       "contact": "Ваш контакт",
+      "email": "Почта",
       "phone": "Телефон",
-      "submit": "Отправить"
+      "phonePattern": "Международный номер телефона, например +15551234567",
+      "submit": "Отправить",
+      "submitError": "Что-то пошло не так. Попробуйте ещё раз.",
+      "submitting": "Отправка...",
+      "telegram": "Телега",
+      "telegramPattern": "Telegram username, например @username",
+      "tooManyRequests": "Слишком много попыток. Попробуйте позже."
     },
     "success": {
       "title": "Мы получили вашу заявку!",

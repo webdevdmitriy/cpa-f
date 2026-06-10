@@ -9,6 +9,7 @@ import { ArrowIcon } from '@/assets/icons/ArrowIcon'
 
 import type { Multiply } from '@/api/types'
 import type { Locale } from '@/i18n/routing'
+import { useApplicationModal } from '@/components/ApplicationModals/ApplicationModals'
 
 import { Footer } from '../../Footer/Footer'
 import VolumetricButton from '../../VolumetricButton/Button'
@@ -26,6 +27,7 @@ const btnTitles = {
 
 export default function MultiWithUsTabs({ data }: MultiWithUsTabsProps) {
   const [tabIndex, setTabIndex] = useState(0)
+  const { openApplicationForm } = useApplicationModal()
 
   const titles = data.map(item => item.title)
   const steps = data.map(item => item.steps)
@@ -58,7 +60,7 @@ export default function MultiWithUsTabs({ data }: MultiWithUsTabsProps) {
           <p>{steps[tabIndex].step_2}</p>
           <ArrowIcon className={styles.arrow} />
           <div className={styles.btn}>
-            <VolumetricButton label={btnTitles[locale][tabIndex]} />
+            <VolumetricButton label={btnTitles[locale][tabIndex]} onClick={openApplicationForm} />
           </div>
         </div>
 

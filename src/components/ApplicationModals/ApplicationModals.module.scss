@@ -1,10 +1,25 @@
-.showcase {
+.modal {
+  position: fixed;
+  inset: 0;
   display: grid;
-  width: min(100%, rem(1148));
-  grid-template-columns: repeat(2, minmax(0, rem(558)));
-  align-items: start;
-  gap: rem(32);
-  justify-content: center;
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  margin: 0;
+  overflow: auto;
+  padding: rem(24);
+}
+
+.modal::backdrop {
+  background: rgba($color-ink, 0.72);
+}
+
+.showcase {
+  width: min(100%, rem(558));
 }
 
 .cardShell {
@@ -181,17 +196,22 @@
   color: $color-ink;
 }
 
+.selectField select:invalid {
+  color: transparent;
+}
+
 .selectField option {
   background: $color-white;
   color: $color-ink;
 }
 
-.selectField select:valid + .fieldText {
-  opacity: 0;
-}
-
 .contactField input {
   color: $color-ink;
+}
+
+.contactField input:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
 }
 
 .contactField input:focus + .fieldText,
@@ -219,6 +239,21 @@
 
 .submitButton {
   min-width: rem(138);
+}
+
+.primaryButton:disabled {
+  cursor: progress;
+  opacity: 0.72;
+}
+
+.formError {
+  margin-top: rem(-16);
+  color: $color-purple;
+  font-family: $font-family-secondary;
+  font-size: rem(14);
+  font-weight: 300;
+  line-height: rem(17);
+  text-align: center;
 }
 
 .successContent {
@@ -265,12 +300,15 @@
 
 @media (max-width: rem(1180)) {
   .showcase {
-    grid-template-columns: 1fr;
-    max-width: rem(558);
+    margin: 0 auto;
   }
 }
 
 @media (max-width: rem(620)) {
+  .modal {
+    padding: rem(16);
+  }
+
   .card {
     height: auto;
     min-height: rem(387);

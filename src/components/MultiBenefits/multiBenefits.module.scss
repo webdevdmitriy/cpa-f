@@ -51,15 +51,10 @@
   min-height: rem(700);
 }
 
-.textContent {
-  max-width: rem(521);
-  padding-top: rem(87);
-}
-
 .title {
-  max-width: rem(510);
+  max-width: rem(650);
   color: $color-white;
-  font-size: rem(40);
+  font-size: rem(50);
   font-weight: $font-weight-bold;
   line-height: rem(40);
 }
@@ -69,10 +64,10 @@
 }
 
 .description {
-  max-width: rem(510);
+  max-width: rem(550);
   margin-top: rem(20);
   color: $color-white;
-  font-size: rem(16);
+  font-size: rem(20);
   font-weight: $font-weight-medium;
   line-height: rem(24);
 }
@@ -80,9 +75,9 @@
 .snake {
   position: absolute;
   top: rem(220);
-  left: rem(376);
+  left: rem(385);
   z-index: 1;
-  width: rem(332);
+  width: rem(390);
   height: auto;
   pointer-events: none;
 }
@@ -93,7 +88,7 @@
   right: 0;
   z-index: 2;
   display: flex;
-  width: rem(511);
+  width: rem(563);
   flex-direction: column;
   gap: rem(20);
   list-style: none;
