@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+  @include container;
+}
+
+.multiWithUs {
+  background: $color-gradient;
+}
+
+.header {
+  font-size: $font-size-2xl;
+  text-align: right;
+  color: $color-yellow;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+}
+
+.snake {
+  position: absolute;
+  bottom: 0;
+  left: rem(-60);
+  pointer-events: none;
+}
