@@ -40,10 +40,18 @@
       "noteBefore": "Fields with an asterisk",
       "noteAfter": "are mandatory",
       "name": "Your Name",
+      "namePattern": "Name must contain at least 2 letters",
       "contactMethod": "Contact Method",
       "contact": "Your Contact",
+      "email": "Email",
       "phone": "Phone",
-      "submit": "Submit"
+      "phonePattern": "International phone number, for example +15551234567",
+      "submit": "Submit",
+      "submitError": "Something went wrong. Please try again.",
+      "submitting": "Sending...",
+      "telegram": "Telegram",
+      "telegramPattern": "Telegram username, for example @username",
+      "tooManyRequests": "Too many attempts. Please try again later."
     },
     "success": {
       "title": "We have received your application!",

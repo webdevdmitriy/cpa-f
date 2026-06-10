@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { SnakeHeadIcon } from '@/assets/icons/SnakeHeadIcon'
 import snakeImage from '@/assets/images/snake_4.png'
-import { SectionLabel } from '@/components/SectionLabel'
+import { PageTitle } from '@/components/PageTitle/PageTitle'
 import { useTranslations } from 'next-intl'
 import { BenefitCard } from './BenefitCard'
 import styles from './multiBenefits.module.scss'
@@ -17,7 +17,7 @@ export function MultiBenefits() {
     <section className={styles.section} aria-labelledby="multi-benefits-title">
       <div className={styles.container}>
         <div className={styles.grid} aria-hidden="true" />
-        <SectionLabel id="multi-benefits-title">{t('label')}</SectionLabel>
+        <PageTitle className={styles.label} id="multi-benefits-title" text={t('label')} />
 
         <div className={styles.textContent}>
           <h2 className={styles.title}>

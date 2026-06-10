@@ -1,5 +1,7 @@
 export type HttpMethod = 'GET' | 'POST'
 
+export type ContactMethod = 'telegram' | 'email' | 'phone'
+
 export interface Benefit {
   title: string
   description: string
@@ -7,8 +9,8 @@ export interface Benefit {
 }
 
 export interface FormRequest {
-  name?: string
-  method: string
+  name: string
+  method: ContactMethod
   contact: string
 }
 

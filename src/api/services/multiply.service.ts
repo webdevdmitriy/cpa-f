@@ -1,5 +1,5 @@
 import { request } from '../client'
-import { Multiply } from '../types'
+import type { Multiply } from '../types'
 import type { Locale } from '@/i18n/routing'
 import { endpoints } from '../endpoints'
 import { multiplySchema } from '../schemas/multiply.schema'
