@@ -1,17 +1,16 @@
-import styles from './MultiWithUs.module.scss'
-
 import Image from 'next/image'
 import { getLocale } from 'next-intl/server'
-
-import { PageTitle } from '../PageTitle/PageTitle'
 
 import snake_3 from '@/assets/images/snake_3.png'
 
 import { multiplyService } from '@/api/services/multiply.service'
-import type { Locale } from '@/i18n/routing'
 import type { Multiply } from '@/api/types'
+import type { Locale } from '@/i18n/routing'
 
+import { PageTitle } from '../PageTitle/PageTitle'
 import MultiWithUsTabs from './MultiWithUsTabs/MultiWithUsTabs'
+
+import styles from './MultiWithUs.module.scss'
 
 export default async function MultiWithUs() {
   const locale = (await getLocale()) as Locale

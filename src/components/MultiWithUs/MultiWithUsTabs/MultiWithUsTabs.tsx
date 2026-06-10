@@ -1,17 +1,27 @@
 'use client'
 
-import styles from './MultiWithUsTabs.module.scss'
 import { useState } from 'react'
-import cn from 'classnames'
 
-import { Footer } from '../../Footer/Footer'
-import VolumetricButton from '../../VolumetricButton/Button'
+import cn from 'classnames'
+import { useLocale } from 'next-intl'
+
 import { ArrowIcon } from '@/assets/icons/ArrowIcon'
 
 import type { Multiply } from '@/api/types'
+import type { Locale } from '@/i18n/routing'
+
+import { Footer } from '../../Footer/Footer'
+import VolumetricButton from '../../VolumetricButton/Button'
+
+import styles from './MultiWithUsTabs.module.scss'
 
 type MultiWithUsTabsProps = {
   data: Multiply[]
+}
+
+const btnTitles = {
+  en: ['join the team', 'partner up', 'launch now'],
+  ru: ['в команду', 'стать партнёром', 'запустить проект']
 }
 
 export default function MultiWithUsTabs({ data }: MultiWithUsTabsProps) {
@@ -19,6 +29,8 @@ export default function MultiWithUsTabs({ data }: MultiWithUsTabsProps) {
 
   const titles = data.map(item => item.title)
   const steps = data.map(item => item.steps)
+
+  const locale = useLocale() as Locale
 
   return (
     <div className={styles.tabs}>
@@ -46,7 +58,7 @@ export default function MultiWithUsTabs({ data }: MultiWithUsTabsProps) {
           <p>{steps[tabIndex].step_2}</p>
           <ArrowIcon className={styles.arrow} />
           <div className={styles.btn}>
-            <VolumetricButton label="partner up" />
+            <VolumetricButton label={btnTitles[locale][tabIndex]} />
           </div>
         </div>
 
