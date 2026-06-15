@@ -17,6 +17,7 @@ export default function ProfitSection() {
 
   return (
     <div className={styles.profit}>
+      <div className={styles.grid} aria-hidden="true"></div>
       <div className={styles.container}>
         <Header />
         <div className={styles.wrapper}>

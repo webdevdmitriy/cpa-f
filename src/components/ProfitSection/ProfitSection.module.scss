@@ -9,6 +9,14 @@
   background: $color-gradient;
 }
 
+.grid {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+
+  background: url('/images/profits-section-grid.svg') center / cover no-repeat;
+}
+
 .wrapper {
   position: relative;
   display: flex;
